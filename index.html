@@ -24,13 +24,15 @@
             <span class="logo-part">Web</span>Studio</a
           >
           <ul class="nav-list">
-            <li>
+            <li class="nav-item">
               <a class="nav-list-item current" href="./index.html">Студія</a>
             </li>
-            <li>
+            <li class="nav-item">
               <a class="nav-list-item" href="./portfolio.html">Портфоліо</a>
             </li>
-            <li><a class="nav-list-item" href="">Контакти</a></li>
+            <li class="nav-item">
+              <a class="nav-list-item" href="">Контакти</a>
+            </li>
           </ul>
         </nav>
 
@@ -60,7 +62,9 @@
 
       <section class="hero">
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="button-hero">Замовити послугу</button>
+        <button type="button" class="button-hero" data-modal-open>
+          Замовити послугу
+        </button>
       </section>
 
       <!-- Переваги -->
@@ -122,29 +126,32 @@
         <div class="container">
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="work-list">
-            <li>
+            <li class="work-item">
               <img
                 src="./images/picture1.jpg"
                 alt="Десктопні додатки"
                 width="370"
                 height="294"
               />
+              <h3 class="work-title">Десктопні додатки</h3>
             </li>
-            <li>
+            <li class="work-item">
               <img
                 src="./images/picture2.jpg"
                 alt="Мобільні додатки"
                 width="370"
                 height="294"
               />
+              <h3 class="work-title">Мобільні додатки</h3>
             </li>
-            <li>
+            <li class="work-item">
               <img
                 src="./images/picture3.jpg"
                 alt="Дизайнерські рішення"
                 width="370"
                 height="294"
               />
+              <h3 class="work-title">Дизайнерські рішення</h3>
             </li>
           </ul>
         </div>
@@ -428,5 +435,16 @@
         </div>
       </div>
     </footer>
+    <!-- Модалка -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="backgr-dagger" type="button" data-modal-close>
+          <svg class="icon-close" height="11" width="11">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
